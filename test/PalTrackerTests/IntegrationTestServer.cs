@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.TestHost;
+using Microsoft.AspNetCore.Mvc.Testing;
 using PalTracker;
 
 namespace PalTrackerTests
@@ -6,6 +7,6 @@ namespace PalTrackerTests
     public static class IntegrationTestServer
     {
         public static TestServer Start() =>
-            new TestServer(Program.CreateWebHostBuilder(new string[] { }));
+            new WebApplicationFactory<Program>().Server;
     }
 }
