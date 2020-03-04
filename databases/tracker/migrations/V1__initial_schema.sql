@@ -1,11 +1,11 @@
 CREATE TABLE time_entries (
-  id         BIGINT(20) NOT NULL AUTO_INCREMENT,
-  project_id BIGINT(20),
-  user_id    BIGINT(20),
+  id         BIGINT NOT NULL AUTO_INCREMENT,
+  project_id BIGINT,
+  user_id    BIGINT,
   date       DATE,
   hours      INT,
 
   PRIMARY KEY (id)
 )
   ENGINE = innodb
-  DEFAULT CHARSET = utf8;
+  DEFAULT CHARSET = UTF8MB4;
