@@ -160,7 +160,7 @@ workflows:
       - canDeployToProduction:
           type: approval
           requires:
-           - deployToReview
+          - deployToReview
       - deployToProd:
           requires:
-            - canDeployToProduction
+          - canDeployToProduction
